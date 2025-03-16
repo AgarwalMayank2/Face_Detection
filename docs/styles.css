@@ -6,7 +6,7 @@ body {
 }
 
 .project-container {
-	max-width: 1200px;
+	max-width: 1300px;
 	margin: 0 auto;
 	padding: 20px;
 	background-color: #f9f9f9;
@@ -59,7 +59,8 @@ body {
 /* Add some extra styles to make it look nicer */
 
 .project-container h1 {
-	color: #00698f;
+	color: #00698f;	
+	text-align: center;
 }
 
 .project-container p {
