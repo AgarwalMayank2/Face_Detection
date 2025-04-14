@@ -1,17 +1,65 @@
 /* styles.css */
 
 body {
-	font-family: Arial, sans-serif;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	margin: 20px;
+	background-color: #121212;
+	color: #e0e0e0;
 }
 
 .project-container {
 	max-width: 1300px;
-	margin: 0 auto;
-	padding: 20px;
-	background-color: #f9f9f9;
-	border: 1px solid #ddd;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	margin: 0 auto 40px auto;
+	padding: 25px;
+	background-color: #1e1e1e;
+	border: 1px solid #333;
+	border-radius: 12px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+	transition: background-color 0.3s ease;
+}
+
+.project-container:hover {
+	background-color: #2a2a2a;
+}
+
+.project-container h1 {
+	color: #80cbc4;
+	text-align: center;
+	font-size: 2.2em;
+	margin-bottom: 10px;
+}
+
+.subtitle {
+	text-align: center;
+	color: #b0bec5;
+	margin-bottom: 20px;
+}
+
+.project-container h2 {
+	color: #ffab91;
+	margin-top: 30px;
+}
+
+.project-container h3 {
+	color: #ffd180;
+}
+
+.project-container p,
+.project-container li,
+.project-container a {
+	color: #dcdcdc;
+	line-height: 1.6;
+}
+
+.project-container a:hover {
+	color: #81d4fa;
+}
+
+hr {
+	border: none;
+	height: 1px;
+	background: #444;
+	margin: 20px 0;
 }
 
 .team-members {
@@ -21,20 +69,23 @@ body {
 }
 
 .team-members li {
-	margin-bottom: 10px;
-	background-color: #f2f2f2;
-	padding: 10px;
-	border-bottom: 1px solid #ccc;
+	margin-bottom: 12px;
+	background-color: #2c2c2c;
+	padding: 12px;
+	border-left: 5px solid #80cbc4;
+	transition: background-color 0.3s ease;
 }
 
-/* Responsive styles */
+.team-members li:hover {
+	background-color: #373737;
+}
+
+/* Responsive Styles */
 
 @media (max-width: 768px) {
 	.project-container {
 		max-width: 600px;
-	}
-	.team-members li {
-		padding: 5px;
+		padding: 15px;
 	}
 }
 
@@ -42,31 +93,10 @@ body {
 	.project-container {
 		max-width: 400px;
 	}
-	.team-members li {
-		padding: 2px;
-	}
 }
 
 @media (max-width: 320px) {
 	.project-container {
 		max-width: 300px;
 	}
-	.team-members li {
-		padding: 1px;
-	}
-}
-
-/* Add some extra styles to make it look nicer */
-
-.project-container h1 {
-	color: #00698f;	
-	text-align: center;
-}
-
-.project-container p {
-	color: #666;
-}
-
-.team-members li:hover {
-	background-color: #e2e2e2;
 }
