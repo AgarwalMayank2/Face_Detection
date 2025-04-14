@@ -85,14 +85,16 @@ We observed that models trained on preprocessed images performed significantly b
 				<hr>
 				<h3>How we applied it</h3>
 				<p>
-					{write in brief, include images if possible} <br>
-					e.g. We assumed each pixel of image as a feature and trained our model on the LFW dataset. We used the decision tree algorithm to classify the images into classes i.e. each class for different person.
+					We assumed each pixel of image as a feature and trained our model on the LFW dataset. We used the decision tree algorithm to classify the images into classes i.e. each class for different person.
 				</p>
 				<hr>
 				<h3>Results</h3>
 				<p>
-					{write in brief, include images, include your observations} <br>
-					e.g We achieved an accuracy of 0.75 on the LFW dataset using the decision tree algorithm.
+					best result is KNN on CNN + LBP features with lda keeping k=5:
+					<ul>
+						<li>Test Accuracy : 79.04%</li>
+						<li>Train Accuracy :98.00%</li>
+					</ul>
 				</p>
 		</div>
 		</div>
@@ -100,21 +102,21 @@ We observed that models trained on preprocessed images performed significantly b
 			<h2 id="nb">Naive Bayes algorithm<a style="font-size : medium;" href="https://github.com/AgarwalMayank2/Face_Detection/blob/main/applying_ML_algorithms/Naive_bayes_PRML_project.ipynb" target="_blank">Code</a></h2>
 				<h3>Introduction</h3>
 				<p>
-					The LFW dataset has varied number of images per person, some have very few images, while others have a large number of images.<br>
-					Since, KNN does not require any training, instead, it calculates the distances of the test data point from all the training data points each time, hence, it gives nearly accurate predictions most of the times.
 
 				</p>
 				<hr>
 				<h3>How we applied it</h3>
 				<p>
-					{write in brief, include images if possible} <br>
-					e.g. We assumed each pixel of image as a feature and trained our model on the LFW dataset. We used the decision tree algorithm to classify the images into classes i.e. each class for different person.
 				</p>
 				<hr>
 				<h3>Results</h3>
 				<p>
-					{write in brief, include images, include your observations} <br>
-					e.g We achieved an accuracy of 0.75 on the LFW dataset using the decision tree algorithm.
+
+					best result is on CNN features :
+					<ul>
+						<li>Test Accuracy : 0.39</li>
+						<li>Train Accuracy :0.57</li>
+					</ul>
 				</p>
 		</div>
 		<div class="project-container">
@@ -134,8 +136,12 @@ We observed that models trained on preprocessed images performed significantly b
 				<hr>
 				<h3>Results</h3>
 				<p>
-					{write in brief, include images, include your observations} <br>
-					e.g We achieved an accuracy of 0.75 on the LFW dataset using the decision tree algorithm.
+					best result is on CNN features with max depth of 6 :
+					<ul>
+						<li>Test Accuracy : 0.75</li>
+						<li>Train Accuracy :0.99</li>
+					</ul>
+
 				</p>
 		</div>
 		<div class="project-container">
@@ -155,8 +161,11 @@ We observed that models trained on preprocessed images performed significantly b
 				<hr>
 				<h3>Results</h3>
 				<p>
-					{write in brief, include images, include your observations} <br>
-					e.g We achieved an accuracy of 0.75 on the LFW dataset using the decision tree algorithm.
+					best result is on CNN features  :
+					<ul>
+						<li>Test Accuracy : </li>
+						<li>Train Accuracy :</li>
+					</ul>
 				</p>
 		</div>
 
@@ -177,8 +186,11 @@ We observed that models trained on preprocessed images performed significantly b
 				<hr>
 				<h3>Results</h3>
 				<p>
-					{write in brief, include images, include your observations} <br>
-					e.g We achieved an accuracy of 0.75 on the LFW dataset using the decision tree algorithm.
+					best result is on CNN features on applying LDA :
+					<ul>
+						<li>Test Accuracy :0.802 </li>
+						<li>Train Accuracy :1.00</li>
+					</ul>
 				</p>
 		</div>
 	<div class="project-container">
@@ -198,9 +210,13 @@ We observed that models trained on preprocessed images performed significantly b
 				<hr>
 				<h3>Results</h3>
 				<p>
-					{write in brief, include images, include your observations} <br>
-					e.g We achieved an accuracy of 0.75 on the LFW dataset using the decision tree algorithm.
+						best result is on CNN features with LDA:
+					<ul>
+						<li>Test Accuracy : 77% </li>
+						<li>Train Accuracy :100%</li>
+					</ul>
 				</p>
+	</div>
 		<div class="project-container">
 			<h2 id="svm">ANN <a style="font-size: medium;" href="https://github.com/AgarwalMayank2/Face_Detection/blob/main/applying_ML_algorithms/ann_main.ipynb" target="_blank">Code</a></h2>
 			<hr>
@@ -218,12 +234,35 @@ We observed that models trained on preprocessed images performed significantly b
 				<hr>
 				<h3>Results</h3>
 				<p>
-					{write in brief, include images, include your observations} <br>
-					e.g We achieved an accuracy of 0.75 on the LFW dataset using the decision tree algorithm.
+						best result is on CNN features with LDA:
+					<ul>
+						<li>Test Accuracy : 79.33% </li>
+						<li>Train Accuracy :100%</li>
+					</ul>
 				</p>
 		</div>
-		
+
+		<div class="project-container">
+			<h2 id="dt">Results</h2>
+				<hr>
+				<div class = "image1">
+					
+				<img src="images/result1.png" alt="result1" height="500px" >
+				</div>	
+				
 		</div>
-	</div>
+		<div class="project-container">
+			<h2 id="dt">Web demo</h2>
+				<hr>
+				<div class = "demo1">
+					
+				<img src="images/web1.png" alt="result1" height="500px" >
+				</div>	
+			
+				<div class = "demo2">
+					
+				<img src="images/web2.png" alt="result1" height="500px" >
+				</div>		
+		</div>
 </body>
 </html>
