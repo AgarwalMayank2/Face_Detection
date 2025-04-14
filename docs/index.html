@@ -43,6 +43,7 @@
 			<li><a href="#dt">Decision Tree algorithm</a></li>
 			<li><a href="#svm">Support Vector Machine algorithm</a></li>
 		</ul>
+	</div>
 		<div class="project-container">
 			<h2 id="processing_data">Data pre-processing</h2>
 			<hr>
@@ -54,8 +55,14 @@
 			<hr>
 			<h3>How we processed the data</h3>
 			<p>
-				{write in brief, include images if possible} <br>
-				e.g. We preprocessed the LFW dataset by resizing the images to 64x64 pixels and converting them to grayscale. We then split the dataset into training and testing sets.
+				<ul>
+					<li>filtered data set to include images with count more than 10</li>
+					<li>using pretrained Resnet to extract CNN features and saving into csv</li>
+					<li>from skimage library we imported functions to extract HoG features and store into csv</li>
+					<li>used openCV to extract LBP features and store into csv</li>
+					<li>then we applied some more filtering and PCA/LDA for dimensionality reduction</li>
+				</ul>
+				This is how our final dataset was made and was then used to train on various algorithms mentioned below.
 			</p>
 			<hr>
 			<h3>Why we processed the data</h3>
@@ -69,7 +76,7 @@
 				<li>Achieving faster training and testing due to smaller, cleaner inputs.</li>
 				</ul>
 We observed that models trained on preprocessed images performed significantly better than those trained on raw RGB images, particularly in terms of training time and classification accuracy.
-
+We also noticed that some images classes had very few images, which made it difficult for the model to learn from them. To address this, we filtered the dataset to include only those classes with a minimum of 80 images. This ensured that our model had enough data to learn from and improved its overall performance.
 
 			</p>
 		</div>
@@ -97,15 +104,15 @@ We observed that models trained on preprocessed images performed significantly b
 					</ul>
 				</p>
 		</div>
-		</div>
 		<div class="project-container">
 			<h2 id="nb">Naive Bayes algorithm<a style="font-size : medium;" href="https://github.com/AgarwalMayank2/Face_Detection/blob/main/applying_ML_algorithms/Naive_bayes_PRML_project.ipynb" target="_blank">Code</a></h2>
 				<h3>Introduction</h3>
 				<p>
-
+Naive Bayes is a probabilistic classifier based on Bayes' Theorem, since features are conditionally independent given the class label. It's simple, fast, and works well with high-dimensional data
 				</p>
 				<hr>
 				<h3>How we applied it</h3>
+				To use Naive Bayes on  dataset with LBP and CNN features we train the Naive Bayes classifier on them to predict identities. Each feature vector (LBP/CNN) is treated as input, and the model learns the probability distribution over identities.
 				<p>
 				</p>
 				<hr>
@@ -124,14 +131,12 @@ We observed that models trained on preprocessed images performed significantly b
 				<hr>
 				<h3>Introduction</h3>
 				<p>
-					{write in brief about your algo and why this is helpful} <br>
-					e.g. Decision Tree algorithm belongs to the family of supervised learning algorithms. Unlike other supervised learning algorithms, the decision tree algorithm can be used for solving regression and classification problems too.
+				 Decision Tree algorithm belongs to the family of supervised learning algorithms. Unlike other supervised learning algorithms, the decision tree algorithm can be used for solving regression and classification problems too.
 				</p>
 				<hr>
 				<h3>How we applied it</h3>
 				<p>
-					{write in brief, include images if possible} <br>
-					e.g. We assumed each pixel of image as a feature and trained our model on the LFW dataset. We used the decision tree algorithm to classify the images into classes i.e. each class for different person.
+					To use a Decision Tree on the LFW dataset with LBP and CNN features, begin by preprocessing the images to extract these features — LBP captures local texture patterns, while CNN features encode deeper, high-level representations.rain the Decision Tree classifier on the training set by recursively partitioning the feature space to maximize class purity.The model learns patterns that differentiate between individual identities
 				</p>
 				<hr>
 				<h3>Results</h3>
@@ -149,14 +154,12 @@ We observed that models trained on preprocessed images performed significantly b
 			<hr>
 				<h3>Introduction</h3>
 				<p>
-					{write in brief about your algo and why this is helpful} <br>
-					e.g. Decision Tree algorithm belongs to the family of supervised learning algorithms. Unlike other supervised learning algorithms, the decision tree algorithm can be used for solving regression and classification problems too.
+					Support Vector Machines (SVMs) are powerful supervised learning algorithms used for face identification by separating facial images into distinct classes. In this context, SVMs can model dissimilarities between faces in a "difference space," distinguishing between images of the same person and those of different individuals
 				</p>
 				<hr>
 				<h3>How we applied it</h3>
 				<p>
-					{write in brief, include images if possible} <br>
-					e.g. We assumed each pixel of image as a feature and trained our model on the LFW dataset. We used the decision tree algorithm to classify the images into classes i.e. each class for different person.
+					first extract the features from each face image.Normalize or scale the features to ensure effective training. Choose an appropriate kernel (linear or RBF) depending on the data distribution. Train the SVM classifier on the labeled feature vectors, where the model finds the optimal hyperplane (or decision boundary) that separates identities with the maximum margin.
 				</p>
 				<hr>
 				<h3>Results</h3>
@@ -174,14 +177,12 @@ We observed that models trained on preprocessed images performed significantly b
 			<hr>
 				<h3>Introduction</h3>
 				<p>
-					{write in brief about your algo and why this is helpful} <br>
-					e.g. Decision Tree algorithm belongs to the family of supervised learning algorithms. Unlike other supervised learning algorithms, the decision tree algorithm can be used for solving regression and classification problems too.
+				Random Forests, an ensemble learning method, combine multiple decision trees to enhance accuracy and robustness in face identification tasks. In face recognition, they handle variations in pose, illumination, and expression by analyzing features like LBP textures or CNN-derived semantic patterns.
 				</p>
 				<hr>
 				<h3>How we applied it</h3>
 				<p>
-					{write in brief, include images if possible} <br>
-					e.g. We assumed each pixel of image as a feature and trained our model on the LFW dataset. We used the decision tree algorithm to classify the images into classes i.e. each class for different person.
+					irst extract these features from the images to form structured input vectors. Random Forest, an ensemble of Decision Trees, is then trained on these features — each tree learns to classify identities using random subsets of data and features, improving generalization and reducing overfitting.The final prediction is made through majority voting among the trees
 				</p>
 				<hr>
 				<h3>Results</h3>
@@ -198,14 +199,12 @@ We observed that models trained on preprocessed images performed significantly b
 			<hr>
 				<h3>Introduction</h3>
 				<p>
-					{write in brief about your algo and why this is helpful} <br>
-					e.g. Decision Tree algorithm belongs to the family of supervised learning algorithms. Unlike other supervised learning algorithms, the decision tree algorithm can be used for solving regression and classification problems too.
+					Clustering in face identification groups unlabeled facial images into distinct clusters, each representing a unique individual, using unsupervised learning
 				</p>
 				<hr>
 				<h3>How we applied it</h3>
 				<p>
-					{write in brief, include images if possible} <br>
-					e.g. We assumed each pixel of image as a feature and trained our model on the LFW dataset. We used the decision tree algorithm to classify the images into classes i.e. each class for different person.
+					after extracting features and applying LDA,Since clustering is unsupervised, no identity labels are used during training. Apply a clustering algorithm like K-Means to group similar faces based on feature similarity
 				</p>
 				<hr>
 				<h3>Results</h3>
@@ -228,8 +227,7 @@ We observed that models trained on preprocessed images performed significantly b
 				<hr>
 				<h3>How we applied it</h3>
 				<p>
-					{write in brief, include images if possible} <br>
-					e.g. We assumed each pixel of image as a feature and trained our model on the LFW dataset. We used the decision tree algorithm to classify the images into classes i.e. each class for different person.
+					extract and normalize these features to form input vectors.then a feedforward neural network with input size matching the feature dimension, hidden layers to learn complex patterns, and an output layer with neurons equal to the number of unique identities. Training the ANN using a labeled dataset, optimizing a loss function like cross-entropy via backpropagation.
 				</p>
 				<hr>
 				<h3>Results</h3>
