@@ -1,6 +1,6 @@
 # PRML_Project
 Project page : https://agarwalmayank2.github.io/Face_Detection/ <br>
-Project report : https://github.com/AgarwalMayank2/Face_Identification/blob/main/docs/files/PRMLproj_report.pdf
+Project report : https://github.com/AgarwalMayank2/Face_Identification/blob/main/docs/files/PRMLproj_report.pdf <br>
 Project video : https://youtu.be/_kpMfS0yt4g?feature=shared
 
 # problem statement
