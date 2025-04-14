@@ -2,7 +2,7 @@
 Project page : https://agarwalmayank2.github.io/Face_Identification/ <br>
 Project report : https://github.com/AgarwalMayank2/Face_Identification/blob/main/docs/files/PRMLproj_report.pdf <br>
 Project video : https://youtu.be/_kpMfS0yt4g?feature=shared <br>
-Project WebDemo : <a href="http://34.47.132.24:5000/" target="_blank">Test Web Demo</a> <br>
+Project WebDemo : <a href="http://34.47.132.24:5000/">Test Web Demo</a> <br>
 Project WebDemo github : https://github.com/shreekar2005/PRML_WebDemo
 
 
