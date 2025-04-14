@@ -2,7 +2,9 @@
 Project page : https://agarwalmayank2.github.io/Face_Detection/ <br>
 Project report : https://github.com/AgarwalMayank2/Face_Identification/blob/main/docs/files/PRMLproj_report.pdf <br>
 Project video : https://youtu.be/_kpMfS0yt4g?feature=shared <br>
-Project webDemo github : https://github.com/shreekar2005/PRML_WebDemo
+Project WebDemo : <a href="http://34.47.132.24:5000/" target="_blank">Test Web Demo</a> <br>
+Project WebDemo github : https://github.com/shreekar2005/PRML_WebDemo
+
 
 # problem statement
 Face Identification: Identify a face image by classifying to one of K classes. Extract LBP, HoG and CNN Features using the code provided and compare different techniques. <br>
